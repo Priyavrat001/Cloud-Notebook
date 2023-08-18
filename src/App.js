@@ -13,14 +13,13 @@ function App() {
   return (
     <div>
       <NoteState>
-      <Header/>
         <Router>
+          <Header />
           <Routes>
             <Route exact path='/' element={<Home />}>
             </Route>
             <Route exact path='/about' element={<About />}>
             </Route>
-
           </Routes>
         </Router>
       </NoteState>

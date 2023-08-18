@@ -1,13 +1,26 @@
 import React from "react";
 import NoteContext from "./noteContext";
 
-const NoteState = ()=>{
-    const state = {
-        "name": "jaidev",
-        "class": "sb"
-    }
+const NoteState = (props)=>{
+    // this is how the context api work
+
+    // const s1 = {
+    //     "name": "jaidev",
+    //     "class": "sb"
+    // }
+    // const [state, setState] = useState(s1)
+    // const updateState = ()=>{
+    //     setTimeout(() => {
+    //         setState({
+    //             "name":"Priyavrat",
+    //             "class": "10b"
+    //         })
+    //     }, 1000);
+    // }
+
     return (
-        <NoteContext.Provider value={{state}}>
+        //value={{state, updateState}}
+        <NoteContext.Provider vlaue={''}> 
             {props.children}
         </NoteContext.Provider>
     )
