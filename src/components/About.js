@@ -1,8 +1,8 @@
-// import React, {useContext, useEffect} from 'react'
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import noteContext from './context/notes/noteContext'
 export const About = () => {
   // const a = useContext(noteContext)
+  // const a {notes, setNotes}
   // useEffect(() => {
   //   //react-hooks/exhaustive-deps
 
@@ -12,8 +12,8 @@ export const About = () => {
   return (
     <div>
            
-           {/* this is {a.state.name} and he is in class {a.state.class} */}
-           about
+           {/* this is {a.notes.tile} and he is in class {a.notes.tile}
+           about */}
     </div>
   )
 }

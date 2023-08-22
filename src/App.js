@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import NoteState from './components/context/notes/NoteState';
+import { Alert } from './components/Alert';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <NoteState>
         <Router>
           <Header />
+          <Alert message={"this is amaxing react course"}/>
           <Routes>
             <Route exact path='/' element={<Home />}>
             </Route>
