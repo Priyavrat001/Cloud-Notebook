@@ -15,11 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3456 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "both": "concurrently \"npm run start\" \"nodemon --inspect=5001 backend/index.js\""
+    "both": "concurrently \"npm run start\" \"nodemon backend/index.js\""
   },
   "eslintConfig": {
     "extends": [
