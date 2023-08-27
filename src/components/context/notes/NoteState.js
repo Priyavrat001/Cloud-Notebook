@@ -23,29 +23,22 @@ const NoteState = (props) => {
         console.log(json)
         setNotes(json)
     }
-    // function for the adding a note
+    // Add a Note
     const addNote = async (title, description, tag) => {
-        //Api call
-        const response = await fetch(`${host}/api/notes/addnotes`, {
+          const response = await fetch(`${host}/api/notes/addnotes`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkYTEzYjMwNjIxMzRhMmNkNzJhMDVmIn0sImlhdCI6MTY5MjAxMzQ5MX0.2sGGWAYjcW92wM7E07wG-kX1E6-okHu84R_9SKi8uvo"
+              'Content-Type': 'application/json',
+              "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRkYTEzYjMwNjIxMzRhMmNkNzJhMDVmIn0sImlhdCI6MTY5MjAxMzQ5MX0.2sGGWAYjcW92wM7E07wG-kX1E6-okHu84R_9SKi8uvo"
             },
-            body: JSON.stringify({title, description, tag}),
-        });
-
-        const note = {
-            "_id": "64da3ss4006c51f14a16a8053e",
-            "user": "64da13b3062134a2cd72a05f",
-            "title": title,
-            "description": description,
-            "tag": tag,
-            "date": "2023-08-14T14:02:40.309Z",
-            "__v": 0
-        };
-        setNotes(notes.concat(note))
-    }
+            body: JSON.stringify({ title, description, tag })
+          });
+      
+          const note = await response.json();
+          setNotes(notes.concat(note));
+      
+      }
+      
 
     // function for the deleting a note
     const deleteNote = async (id) => {

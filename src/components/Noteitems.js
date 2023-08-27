@@ -6,7 +6,7 @@ export const Noteitems = (props) => {
     const {deleteNote} = context;
     const { note, updateNote } = props;
     return (
-        <div className='row'>
+        <div className='row m-auto'>
             <div className="card col-md-4 row my-3">
                 <div className="card-body">
                     <h5 className="card-title">{note.title}</h5>
